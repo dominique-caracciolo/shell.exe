@@ -1,0 +1,7 @@
+touch myupdate.sh #Cree le fichier
+
+echo "sudo apt update && sudo apt upgrade" > myupdate.sh #Ecris dans le fichier
+
+chmod +x myupdate.sh #donne les droits au fichier
+
+./myupdate.sh #Execute le fichier

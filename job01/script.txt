@@ -1,0 +1,8 @@
+touch myfirstscript.sh 								#Cree le fichier
+
+echo 'echo "I'\''m a script"' > myfirstscript.sh	#Ecris dans le fichier
+nano myfirstscript.sh avec "#!/bin/bash" en premiere ligne et la suite du script a la ligne	
+
+chmod +x myfirstscript.sh							#Donne les droit de lecture au script
+
+./myfirstscript.sh 									#Execute le script
