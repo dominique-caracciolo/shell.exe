@@ -1,0 +1,18 @@
+nano hello_bye.sh #Ouvre l'editeur et cree le fichier si il n'existes pas
+saisir le script: 
+---------------------------
+#!/bin/bash
+
+argument=$1
+# Vérification de la valeur de l'argument
+if [ "$argument" = "Hello" ]; then
+  echo "Bonjour, je suis un script !"
+elif [ "$argument" = "Bye" ]; then
+  echo "Au revoir.."
+else
+  echo "Argument invalide. Utilisez 'Hello' ou 'Bye'."
+fi
+----------------------------
+chmod +x hello_bye.sh #Donne les droits
+
+./hello_bye.sh avec "Hello" ou "Bye" comme argument. #Execute le script

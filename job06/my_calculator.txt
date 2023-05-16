@@ -1,0 +1,36 @@
+nano my_calculator.sh #Ouvre l'editeur de texte et cree le fichier quand on l'enregistre
+--------------
+#!/bin/bash
+
+nombre1=$1
+ope=$2
+nombre2=$3
+
+case "$ope" in
+        "+")
+        resultat=$((nombre1 + nombre2))
+        ;;
+        "-")
+        resultat=$((nombre1 - nombre2))
+        ;;
+        "x")
+        resultat=$((nombre1 * nombre2))
+        ;;
+        "/")
+        if [ "$nombre2" -eq 0 ]; then
+                echo "Erreur: Division par zero."
+                exit 1
+        fi
+        resultat=$((nombre1 / nombre2))
+        ;;
+        *)
+        echo "Operateur invalide. Utilisez 'x', '+', '-', ou '/'"
+        exit 1
+;;
+esac
+
+echo "Le résultat de $nombre1 $ope $nombre2 est : $resultat"
+---------------
+chmod +x my_calculator.sh #Donne les droits
+./my_calculator.sh Avec le calcul a faire avec un espace entre chaque valeur, le script donne le resultat.
+
