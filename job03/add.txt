@@ -1,0 +1,19 @@
+nano add.sh #ouvre l'editeur de texte
+ecrire dans le fichier le script
+---------------------
+#!/bin/bash
+
+# Récupération des nombres à additionner
+nombre1=$1
+nombre2=$2
+
+# Calcul de la somme
+somme=$((nombre1 + nombre2))
+
+# Affichage du résultat
+echo "La somme de $nombre1 et $nombre2 est : $somme"
+----------------------
+
+chmod +x add.sh #Donne les droits
+
+./add.sh 40 2 	#Execute le script avec les deux valeur $1 et $2 

@@ -1,0 +1,19 @@
+nano argument.sh #ouvre un fichier dans l'editeur
+
+ecrire le script :
+
+----------------------
+#!/bin/bash
+
+new_file=$1 #Donne la valeur 1 a rentrer
+source_file=$2 #Donne la valeur 2 a rentrer
+
+cat "$source_file" > "$new_file"
+
+
+----------------------
+
+chmod +x argument.sh #donne les droits
+
+./argument "Nouveau fichier a cree en copy" "Fichier source a copier"
+
