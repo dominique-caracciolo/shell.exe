@@ -73,6 +73,11 @@ chmond +x accessright.sh
 sudo apt-get install csvtool
 sudo apt update
 
+crontab -e #ouvre l'editeur cron
+* 0 * * * /home/user/accessright.sh
+
+
 sudo ./accessright.sh
+
 
 
